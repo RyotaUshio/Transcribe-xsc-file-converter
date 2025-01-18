@@ -10,6 +10,8 @@ test("parsed .xsc data with no timestamps can be converted to Audacity Label Tra
       list: [],
       autonumbering: { byMarkerType: {} },
     },
+    textBlocks: { list: [], font: {} },
+    loops: { list: [] },
   }
   const labelTrackFormat = toAudacityLabelTrackFormat(parseDataWithOneMarker)
   expect(labelTrackFormat).toEqual("")
@@ -36,6 +38,8 @@ test("parsed .xsc data with a single late, unlabeled timestamp can be converted 
       ],
       autonumbering: { byMarkerType: {} },
     },
+    textBlocks: { list: [], font: {} },
+    loops: { list: [] },
   }
   const labelTrackFormat = toAudacityLabelTrackFormat(parseDataWithOneMarker)
   expect(labelTrackFormat).toEqual("7144.157\t7144.157\t\n")
@@ -65,6 +69,8 @@ test("parsed .xsc data with a single labeled timestamp can be converted to Audac
       ],
       autonumbering: { byMarkerType: {} },
     },
+    textBlocks: { list: [], font: {} },
+    loops: { list: [] },
   }
   const labelTrackFormat = toAudacityLabelTrackFormat(parseDataWithOneMarker)
   expect(labelTrackFormat).toEqual("3\t3\tstart of the good part\n")
