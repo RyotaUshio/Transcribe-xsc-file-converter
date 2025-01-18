@@ -4,6 +4,7 @@ import { ParseState, LineParser } from "./types"
 import { assertCurrentSection } from "./line_parser_helpers"
 import { parseMarker } from "./line_parser_for_Marker_line"
 import { parseTextBlock, parseTextBlockFont } from "./line_parser_for_TextBlock_line"
+import { parseLoop } from "./line_parser_for_Loop_line"
 
 // parsers of lines that define sections
 
@@ -123,4 +124,6 @@ export const lineParsers: { [lineKey: string]: LineParser } = {
   // parsers of lines for fields in the TextBlocks section
   T: parseTextBlock,
   TextBlockFont: parseTextBlockFont,
+  // parsers of lines for fields in the Loops section
+  L: parseLoop,
 }

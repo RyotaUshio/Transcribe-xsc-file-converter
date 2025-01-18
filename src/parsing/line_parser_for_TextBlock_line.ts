@@ -43,3 +43,4 @@ export function parseTextBlockFont(line: string, currentState: ParseState): Pars
         };
     });
 }
+

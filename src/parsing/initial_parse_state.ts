@@ -8,6 +8,7 @@ export const initialParseState: ParseState = {
       autonumbering: { byMarkerType: {} },
     },
     textBlocks: { list: [], font: {} },
+    loops: { list: [] },
   },
   currentSection: null,
 }

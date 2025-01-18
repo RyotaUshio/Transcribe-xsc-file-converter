@@ -34,16 +34,24 @@ export interface ParseData {
     list: Array<{
       timestamp: TimestampWithPreparsedParts
       color: string
-      text: string,
-      height: number,
-      width: number,
-      fitWidth: boolean,
+      text: string
+      height: number
+      width: number
+      fitWidth: boolean
     }>
     font: {
-      size?: number,
-      fixedWidthFontName?: string,
+      size?: number
+      fixedWidthFontName?: string
       proportionalWidthFontName?: string
     }
+  }
+  loops: {
+    list: Array<{
+      index: number
+      color: string
+      startTimestamp: TimestampWithPreparsedParts
+      lengthTimestamp: TimestampWithPreparsedParts
+    }>
   }
 }
 
