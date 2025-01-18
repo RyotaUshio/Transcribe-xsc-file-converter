@@ -55,7 +55,7 @@ export function parseCleanArgv(
     .version()
     .help()
 
-  let yargsArgv
+  let yargsArgv: any
   if (options.outputAndExitOnError) {
     yargsArgv = yargsParser.parse(cleanArgv)
   } else {

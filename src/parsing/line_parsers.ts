@@ -1,8 +1,9 @@
-import produce from "immer"
+import { produce }  from "immer"
 import { splitLineIntoParts } from "./lex"
 import { ParseState, LineParser } from "./types"
 import { assertCurrentSection } from "./line_parser_helpers"
 import { parseMarker } from "./line_parser_for_Marker_line"
+import { parseTextBlock, parseTextBlockFont } from "./line_parser_for_TextBlock_line"
 
 // parsers of lines that define sections
 
@@ -119,4 +120,7 @@ export const lineParsers: { [lineKey: string]: LineParser } = {
   S: parseMarker,
   M: parseMarker,
   B: parseMarker,
+  // parsers of lines for fields in the TextBlocks section
+  T: parseTextBlock,
+  TextBlockFont: parseTextBlockFont,
 }

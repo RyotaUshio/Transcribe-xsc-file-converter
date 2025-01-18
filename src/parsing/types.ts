@@ -30,6 +30,21 @@ export interface ParseData {
       numberContinuously?: boolean
     }
   }
+  textBlocks: {
+    list: Array<{
+      timestamp: TimestampWithPreparsedParts
+      color: string
+      text: string,
+      height: number,
+      width: number,
+      fitWidth: boolean,
+    }>
+    font: {
+      size?: number,
+      fixedWidthFontName?: string,
+      proportionalWidthFontName?: string
+    }
+  }
 }
 
 export interface ParseState {

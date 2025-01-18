@@ -27,7 +27,8 @@ export function unescapeLinePart(linePart: string): string {
       } else if (char === "C") {
         escapedChars.push(",")
       } else {
-        throw new Error("couldn’t interpret unknown escape sequence within '" + linePart + "'")
+        // For example, "\n" or "\r" or "\t" or "\\".
+        escapedChars.push("\\", char)
       }
       nextCharIsEscape = false
     } else if (char === "\\") {
