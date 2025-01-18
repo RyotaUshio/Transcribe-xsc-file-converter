@@ -27,8 +27,8 @@ export function unescapeLinePart(linePart: string): string {
       } else if (char === "C") {
         escapedChars.push(",")
       } else {
-        // For example, "\n" or "\r" or "\t" or "\\".
-        escapedChars.push("\\", char)
+        // For example, "\n", "\r", etc.
+        escapedChars.push(JSON.parse(`"\\${char}"`))
       }
       nextCharIsEscape = false
     } else if (char === "\\") {
