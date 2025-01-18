@@ -3,7 +3,7 @@
 **Get your data out of your `.xsc` files.**
 
 > [!NOTE]
-> This repository is a fork of [roryokane/Transcribe-xsc-file-converter](https://github.com/roryokane/Transcribe-xsc-file-converter), which adds support for text blocks and loops.
+> This repository is a fork of [roryokane/Transcribe-xsc-file-converter](https://github.com/roryokane/Transcribe-xsc-file-converter). This fork adds support for text blocks and loops.
 
 [Transcribe!] v7’s proprietary `.xsc` files contain the user’s annotations of their music or audio files. This command-line tool, `transcribe-xsc-convert`, converts those `.xsc` files to a readable JSON format.
 
